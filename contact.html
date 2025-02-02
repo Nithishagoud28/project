@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+}
+
+/* Sub-header section */
+.sub-header {
+    height:70vh ;
+    width: 100%;
+    background-image: url(./project-images/eduford_img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+   
+
+.sub-header h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav a img {
+    height: 50px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links ul li {
+    margin: 0 15px;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links ul li a:hover {
+    color: #f44336;
+}
+
+.fa-bars, .fa-times {
+    display: none;
+    font-size: 1.8rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Contact Section */
+.location iframe {
+    width: 80%;
+    height: 350px;
+    border: none;
+    margin: 20px 0;
+    padding-left: 350px;
+
+}
+
+.contact-us {
+    padding: 40px 20px;
+}
+
+.contact-us .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact-col {
+    flex: 1;
+    min-width: 300px;
+    margin: 20px;
+}
+
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-col i {
+    font-size: 1.8rem;
+    color: #f44336;
+    margin-right: 15px;
+}
+
+.contact-col span h5 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.contact-col span p {
+    color: #555;
+}
+
+.contact-col form input,
+.contact-col form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact-col form button {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-col form button:hover {
+    background: #d32f2f;
+}
+
+ /* ---------footer---------- */
+ .footer {
+             width:100% ;
+             text-align: center;
+             padding: 30px 0;
+        }
+        .footer h4 {
+            margin-bottom: 25px;
+            margin-top: 20px;
+            font-size: 600;
+        }
+        .icons .fa {
+            color: red;
+            margin: 0 13px;
+            cursor: pointer;
+            padding: 18px 0;
+        }
+
+.footer .icons i:hover {
+    color: #fff;
+}
+
+/* Mobile Devices (320px - 480px) */
+@media screen and (max-width: 480px) {
+    .sub-header {
+        height: 50vh;
+    }
+
+    .sub-header h1 {
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0;
+    }
+
+    .fa-bars {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .location iframe {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .contact-us .row {
+        flex-direction: column;
+    }
+
+    .contact-col {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+}
+
+/* Tablets and Small Screens (481px - 768px) */
+@media screen and (max-width: 768px) {
+    .sub-header {
+        height: 60vh;
+    }
+
+    .sub-header h1 {
+        font-size: 2.5rem;
+    }
+
+    .nav-links ul li {
+        margin: 0 10px;
+    }
+
+    .contact-us .row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-col {
+        width: 100%;
+    }
+
+    .location iframe {
+        width: 90%;
+        padding-left: 0;
+    }
+}
+
+/* Medium Screens (769px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .sub-header {
+        height: 65vh;
+    }
+
+    .sub-header h1 {
+        font-size: 2.8rem;
+    }
+
+    .nav-links ul li {
+        margin: 0 12px;
+    }
+
+    .contact-us {
+        padding: 30px 10px;
+    }
+
+    .contact-col {
+        flex: 1 1 45%;
+        margin: 10px;
+    }
+
+    .location iframe {
+        width: 85%;
+        padding-left: 0;
+    }
+
+    .footer {
+        padding: 25px 0;
+    }
+}
+
+        
+         
+    </style>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href=""><img src="./project-images/eduford_img/logo.png" alt=""></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa fa-times"></i>
+                <ul>
+                    <li><a href="./nithishap.html">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="./course.html">COURSE</a></li>
+                    <li><a href="./blog.html">BLOGS</a></li>
+                    <li><a href="./contact.html">CONTACT</a></li>
+                    <li><a href="./nithishap.html">Back to Home Page</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars"></i>
+        </nav>
+        <h1>Contact Us</h1>
+    </section>
+    <!-- -----------Contact us------------ -->
+     <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3112.959684439921!2d-84.3038144!3d30.4380174!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1734190815547!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+     </section>
+     <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa fa-home" ></i>
+                    <span>
+                        <h5>XYZ Road,ABC Building</h5>
+                        <p>Bangalore,Karnataka,IN</p>
+                    </span>
+                </div>
+
+            </div>
+             <div class="contact-col">
+                <div>
+                    <i class="fa fa-phone" ></i>
+                    <span>
+                        <h5>+1 0123456789</h5>
+                        <p>Monday to saturday,10AM to 6PM</p>
+                    </span>
+                </div>
+             </div>
+             <div class="contact-col">
+                <div>
+                    <i class="fa fa-envelope" ></i>
+                    <span>
+                        <h5>info@contactus.com</h5>
+                        <p>Email us to query</p>
+                    </span>
+                </div>
+             </div>
+             <div class="contact-col">
+                <form action="">
+                    <input type="text" placeholder="Enter your name" required>
+                    <input type="email" placeholder="Enter email address" required>
+                    <input type="text" placeholder="Enter your Subject" required>
+                     <textarea rows="8"placeholder="Message" required></textarea>
+                    <button type="submit" class="hero-btn red-btn" >Send Message</button>
+                    </form>
+             </div>
+        </div>
+     </section>
+     <!-- --------Footer------------- -->
+     <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pellentesque aliquet turpis nulla,eleifend faucibus est <br> sollicitudin ut.Maecenas ut venenat is ex,et dapibus purus.</p>
+       <div class="icons">
+        <i class="fa fa-home" ></i>
+        <i class="fa fa-phone"></i>
+        <i class="fa fa-envelope"></i>
+       </div>
+    </section>
+</body>
+</html>
